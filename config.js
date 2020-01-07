@@ -1,9 +1,9 @@
 // config for your database
 const config = {
     user: 'sa',
-    password: 'Winjit@123',
+    password: 'Ashar@123',
     server: 'localhost',
-    database: 'docuverus'
+    database: 'DocuVerusGroupDB'
 };
 
 

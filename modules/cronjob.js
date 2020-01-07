@@ -18,9 +18,10 @@ cron.schedule('*/1 * * * *', function () {
                 mailData.push(record)
             }
 
-            mailData.forEach(mail => {
-                functions.sendEmail(mail.Email, mail.Subject, mail.Template)
-                console.log("Mail sent to " + email);
+            mailData.forEach(record => {
+                functions.sendEmail(record)
+               // console.log("Mail sent to " + mail.Email);
+
 
             })
         })
