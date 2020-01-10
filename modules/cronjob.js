@@ -10,12 +10,14 @@ cron.schedule('*/1 * * * *', function () {
     request.query('exec GetReminderEmailApplicants', function (err, recordset) {
 
             if (err) console.log(err)
+            if(!recordset) return;
             
             recordset.recordset.forEach(record => {
-                //record have properties like 
-                //(Email, ApplicantId, Subject, Template, EmailFlag, DisplayName)
+                /**
+                 * record have properties like 
+                 * (Email, ApplicantId, Subject, Template, EmailFlag, DisplayName) 
+                 */
                 functions.sendEmail(record)
-                //console.log("Mail sent to " + record.Email);
             })
         })
 })

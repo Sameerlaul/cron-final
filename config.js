@@ -1,13 +1,13 @@
-const port =normalizePort(process.env.PORT || '3000');
-// config for your database
+const port =process.env.PORT || '3000';
+// config for your database and email credentials
 const config = {
     user: 'sa',
-    password: 'Ashar@123',
+    password: 'Winjit@123',
     server: 'localhost',
-    database: 'DocuVerusGroupDB',
+    database: 'docuverus',
     email: 'docuverus@gmail.com',
     emailPass: 'winjit@123',
-    port: port
+    portNo: port
 };
 
 
